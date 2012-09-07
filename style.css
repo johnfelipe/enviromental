@@ -1,0 +1,293 @@
+/*
+Theme Name: Toolbox/stripped
+Theme URI: n/a
+Author: Automattic/drcable
+Author URI: https://github.com/drcable/stripped-toolbox
+Description: A stripped down version of automattics toolbox, because i was doing the same thing over and over again, cleaning out the css and useless PHP
+Version: 1.4/0
+License: GNU General Public License
+License URI: license.txt
+Tags: simple, base,custom-menu, sticky-post, microformats, rtl-language-support, translation-ready, full-width-template, post-formats
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* =Structure
+-------------------------------------------------------------- */
+#page {
+	width:100%;
+}
+#primary {
+	width: 100%;
+}
+#content {
+}
+#main .widget-area {
+}
+#colophon {
+	clear: both;
+	display: block;
+	width: 100%;
+}
+
+/* Increase the size of the content area for templates without sidebars */
+.full-width #content,
+.image-attachment #content,
+.error404 #content {
+	margin: 0;
+}
+
+/* Text meant only for screen readers */
+.screen-reader-text,
+.assistive-text {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+
+/* =Header
+-------------------------------------------------------------- */
+
+#site-title {
+}
+#site-description {
+}
+
+
+/* =Menu
+-------------------------------------------------------------- */
+
+#access {
+}
+#access ul {
+}
+#access li {
+}
+#access a {
+}
+#access ul ul {
+}
+#access ul ul ul {
+}
+#access ul ul a {
+}
+#access li:hover > a,
+#access ul ul :hover > a {
+}
+#access ul ul a:hover {
+}
+#access ul li:hover > ul {
+}
+
+
+/* =Content
+-------------------------------------------------------------- */
+
+.sticky {
+}
+.entry-meta {
+}
+.single-author .entry-meta .byline {
+}
+#content nav {
+}
+#content nav .nav-previous {
+}
+#content nav .nav-next {
+}
+#content #nav-above {
+}
+.paged #content #nav-above,
+.single #content #nav-above {
+}
+#nav-below {
+}
+.page-link {
+}
+.page .edit-link {
+}
+
+/* 404 page */
+.error404 .widget {
+}
+.error404 .widget .widgettitle,
+.error404 .widget ul {
+}
+.error404 .widget_tag_cloud {
+}
+
+/* Notices */
+.post .notice,
+.error404 #searchform {
+}
+
+/* Image Attachments */
+.image-attachment div.entry-meta {
+}
+.image-attachment nav {
+}
+.image-attachment .entry-content {
+}
+.image-attachment .entry-content .entry-attachment {
+}
+.image-attachment .entry-content .attachment {
+}
+
+/* Aside Posts */
+.format-aside .entry-header {
+}
+.single .format-aside .entry-header {
+}
+.format-aside .entry-content,
+.format-aside .entry-summary {
+}
+.single .format-aside .entry-summary {
+}
+
+/* Gallery Posts */
+.format-gallery .gallery-thumb {
+}
+
+/* Image Posts */
+.format-image .entry-header {
+}
+.single .format-image .entry-header {
+}
+.format-image .entry-content,
+.format-image .entry-summary {
+}
+.single .format-image .entry-content,
+.single .format-image .entry-summary {
+}
+
+
+/* =Images
+-------------------------------------------------------------- */
+
+a img {
+}
+p img {
+	margin-bottom: 0.5em; /* a small bottom margin prevents content floating under images */
+}
+/*
+Resize images to fit the main content area.
+- Applies only to images uploaded via WordPress by targeting size-* classes.
+- Other images will be left alone. Use "size-auto" class to apply to other images.
+*/
+img.size-auto,
+img.size-full,
+img.size-large,
+img.size-medium,
+.attachment img,
+.widget-area img,
+.wp-caption {
+	max-width: 100%; /* When images are too wide for containing element, force them to fit. */
+	height: auto; /* Override height to match resized width for correct aspect ratio. */
+}
+.wp-caption {
+}
+.wp-caption img {
+}
+.wp-caption .wp-caption-text {
+}
+.gallery-caption {
+}
+.wp-smiley {
+}
+/* =Forms
+-------------------------------------------------------------- */
+
+#searchform label {
+}
+#searchform input#s {
+}
+input[type=text],
+input#s {
+}
+textarea {
+}
+
+/* Class for labelling required form items */
+.required {
+}
+
+
+/* =Comments
+-------------------------------------------------------------- */
+
+article.comment {
+}
+#respond input[type=text] {
+}
+#respond textarea {
+}
+#respond .form-allowed-tags {
+}
+#respond .form-allowed-tags code {
+}
+
+
+/* =Widgets
+-------------------------------------------------------------- */
+
+.widget {
+}
+.widget-area .widget_search {
+}
+.widget-area .widget_search input {
+}
+
+/* =Footer
+-------------------------------------------------------------- */
+
+#colophon {
+}
