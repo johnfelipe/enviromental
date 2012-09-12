@@ -1,9 +1,9 @@
 /*
-Theme Name: Toolbox/stripped
+Theme Name: enviromental
 Theme URI: n/a
 Author: Automattic/drcable
 Author URI: https://github.com/drcable/stripped-toolbox
-Description: A stripped down version of automattics toolbox, because i was doing the same thing over and over again, cleaning out the css and useless PHP
+Description: a theme developed for enviromental, built on top of automattics envorimental for semantics, speed of development, and 
 Version: 1.4/0
 License: GNU General Public License
 License URI: license.txt
@@ -12,7 +12,8 @@ Tags: simple, base,custom-menu, sticky-post, microformats, rtl-language-support,
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/*css reset addapted from eric myers css reset*/
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -43,7 +44,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+    line-height: 1;
 }
 ol, ul {
 	list-style: none;
@@ -60,234 +61,207 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-/* =Structure
--------------------------------------------------------------- */
+html,body{
+    height:100%;
+}
+body{
+    background-color:#cadf94;
+    line-height:140%;
+}
 #page {
-	width:100%;
+    min-height:100%;
+    width:90%;
+    box-shadow: 0px 0px 40px #91AB4D;
+    margin:0 auto 3% auto;
+    padding-top:5%;
+    max-width:1200px;
+    margin-top:0;
+    background-color:#91AB4D;
 }
 #primary {
 	width: 100%;
 }
 #content {
+        padding:9% 0% 0 0%;
 }
-#main .widget-area {
+#main{
+    margin:0 3% 0 3%;
+    display:block;
+    height:100%;
 }
-#colophon {
-	clear: both;
-	display: block;
-	width: 100%;
+#secondary{
+    display:inline-block;
+    width:35%;
+    float:right;
+    margin-top:6%;
 }
-
-/* Increase the size of the content area for templates without sidebars */
-.full-width #content,
-.image-attachment #content,
-.error404 #content {
-	margin: 0;
+#primary{
+    display:inline-block;
+    width:62%;
 }
-
-/* Text meant only for screen readers */
+#footwrap{
+    position:fixed;
+    height:1.25em;
+    background-color:#002D0E;
+    bottom:0;
+    left:0;
+    width:100%;
+    }
+footer{
+    max-width:1200px;
+    color:white;
+    width:90%;
+    margin-right:auto;
+    margin-left:auto;
+    padding-left:3%;
+}
+article h1{
+    font-size:200%;
+    padding-bottom:01%;
+}
 .screen-reader-text,
 .assistive-text {
 	position: absolute !important;
 	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
 	clip: rect(1px, 1px, 1px, 1px);
 }
-
-
-/* =Header
--------------------------------------------------------------- */
-
+#headerwrap{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    background-color:#002D0E;
+    color:white;
+    height:5%;
+    padding:2%;
+}
+#branding{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+nav{
+    display:inline-block;
+}
 #site-title {
+    font-size:500%;
+    padding: 1% 0% 0% 1%;
+    display:inline-block;
+}
+nav li{
+    float:left;
+    padding:0 6px 0 6px;
 }
 #site-description {
 }
-
-
-/* =Menu
--------------------------------------------------------------- */
-
+a{
+    color:white;
+    text-decoration:none;
+}
+a:hover{
+    text-decoration:underline;
+}
+h1 a:hover{
+    text-deoctation:none;
+}
 #access {
+float:right;
 }
 #access ul {
 }
 #access li {
+position:relative;
 }
 #access a {
 }
 #access ul ul {
+    display:none;
+    position:relative;
 }
 #access ul ul ul {
 }
-#access ul ul a {
+#access ul ul{
+    width:15em;
+    position:absolute;
+    top:2%;
+    float:left;
+    left:0;
+    background:#002D0E;
 }
 #access li:hover > a,
 #access ul ul :hover > a {
 }
 #access ul ul a:hover {
+    display:block;
+    float:right;
+    border-left:1px solid white;
 }
 #access ul li:hover > ul {
+    display:block;
 }
-
-
-/* =Content
--------------------------------------------------------------- */
-
-.sticky {
+#access ul ul li{
+    width:15em;
 }
-.entry-meta {
+#access ul ul li:hover{
+    text-decoration:underline;
 }
-.single-author .entry-meta .byline {
+@media (max-width: 1100px){
+    #secondary{
+        width:100%;
+        float:none;
+    }
+    footer{
+        width:97.5%;
+        padding:0 0 0 2.5%;
+    }
+    #main{
+        height:auto;
+    }
+    #primary{
+    width:100%;
+    }
+    #page{
+        margin:0;
+        width:100%;
+        padding:0;
+    }
+    #headerwrap{
+        position:relative;
+        top:auto;
+        left:auto;
+        margin:0;
+        padding-top:2em;
+        height:5em;
+    }
+    #content{
+        padding-top:1em;;
+    }
+    #access{
+        display:block;
+        float:none;     
+        padding-top:1em;
+        margin-left:auto;
+        margin-right:auto;
+    }
 }
-#content nav {
-}
-#content nav .nav-previous {
-}
-#content nav .nav-next {
-}
-#content #nav-above {
-}
-.paged #content #nav-above,
-.single #content #nav-above {
-}
-#nav-below {
-}
-.page-link {
-}
-.page .edit-link {
-}
-
-/* 404 page */
-.error404 .widget {
-}
-.error404 .widget .widgettitle,
-.error404 .widget ul {
-}
-.error404 .widget_tag_cloud {
-}
-
-/* Notices */
-.post .notice,
-.error404 #searchform {
-}
-
-/* Image Attachments */
-.image-attachment div.entry-meta {
-}
-.image-attachment nav {
-}
-.image-attachment .entry-content {
-}
-.image-attachment .entry-content .entry-attachment {
-}
-.image-attachment .entry-content .attachment {
-}
-
-/* Aside Posts */
-.format-aside .entry-header {
-}
-.single .format-aside .entry-header {
-}
-.format-aside .entry-content,
-.format-aside .entry-summary {
-}
-.single .format-aside .entry-summary {
-}
-
-/* Gallery Posts */
-.format-gallery .gallery-thumb {
-}
-
-/* Image Posts */
-.format-image .entry-header {
-}
-.single .format-image .entry-header {
-}
-.format-image .entry-content,
-.format-image .entry-summary {
-}
-.single .format-image .entry-content,
-.single .format-image .entry-summary {
-}
-
-
-/* =Images
--------------------------------------------------------------- */
-
-a img {
-}
-p img {
-	margin-bottom: 0.5em; /* a small bottom margin prevents content floating under images */
-}
-/*
-Resize images to fit the main content area.
-- Applies only to images uploaded via WordPress by targeting size-* classes.
-- Other images will be left alone. Use "size-auto" class to apply to other images.
-*/
-img.size-auto,
-img.size-full,
-img.size-large,
-img.size-medium,
-.attachment img,
-.widget-area img,
-.wp-caption {
-	max-width: 100%; /* When images are too wide for containing element, force them to fit. */
-	height: auto; /* Override height to match resized width for correct aspect ratio. */
-}
-.wp-caption {
-}
-.wp-caption img {
-}
-.wp-caption .wp-caption-text {
-}
-.gallery-caption {
-}
-.wp-smiley {
-}
-/* =Forms
--------------------------------------------------------------- */
-
-#searchform label {
-}
-#searchform input#s {
-}
-input[type=text],
-input#s {
-}
-textarea {
-}
-
-/* Class for labelling required form items */
-.required {
-}
-
-
-/* =Comments
--------------------------------------------------------------- */
-
-article.comment {
-}
-#respond input[type=text] {
-}
-#respond textarea {
-}
-#respond .form-allowed-tags {
-}
-#respond .form-allowed-tags code {
-}
-
-
-/* =Widgets
--------------------------------------------------------------- */
-
-.widget {
-}
-.widget-area .widget_search {
-}
-.widget-area .widget_search input {
-}
-
-/* =Footer
--------------------------------------------------------------- */
-
-#colophon {
+@media (max-width:800px){
+    nav{
+        font-size:2em;
+    }
+    nav li{
+        margin:0.25em;
+        display:block;
+        float:none;
+    }
+    #headerwrap{
+        height:auto;
+    }
+    #access ul ul{
+        position:relative;
+        float:none;
+        display:block
+    }
+    #access ul ul li:before{
+        content:">"
+    }
 }
